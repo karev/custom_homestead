@@ -1,0 +1,24 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+
+folders:
+    - map: F:\laragon\www\
+      to: /home/vagrant/Code
+
+sites:
+    - map: cu.app
+      to: /home/vagrant/Code/polytec/public
+
+    - map: melek.app
+      to: /home/vagrant/Code/melek
+      hhvm: true
+    
+    - map: blog.app
+      to: /home/vagrant/Code/blog/web
+      symfony: true
+
+variables:
+    - key: APP_ENV
+      value: local
